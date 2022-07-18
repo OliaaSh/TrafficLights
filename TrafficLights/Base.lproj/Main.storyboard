@@ -16,25 +16,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="center" ambiguous="YES" axis="vertical" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="RCa-0U-HOe">
-                                <rect key="frame" x="139.5" y="117" width="135" height="447"/>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="RCa-0U-HOe">
+                                <rect key="frame" x="139.5" y="117" width="135" height="448"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w4V-5U-uj4">
-                                        <rect key="frame" x="0.0" y="0.0" width="135" height="135"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w4V-5U-uj4">
+                                        <rect key="frame" x="0.0" y="0.0" width="135" height="135.5"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rcv-as-pKt">
-                                        <rect key="frame" x="0.0" y="156" width="135" height="135"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rcv-as-pKt">
+                                        <rect key="frame" x="0.0" y="156.5" width="135" height="135"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GR8-xS-kOc">
-                                        <rect key="frame" x="0.0" y="312" width="135" height="135"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GR8-xS-kOc">
+                                        <rect key="frame" x="0.0" y="312.5" width="135" height="135.5"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzq-IE-d1t">
-                                <rect key="frame" x="163" y="661" width="89" height="51"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzq-IE-d1t">
+                                <rect key="frame" x="162.5" y="662" width="89" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBrownColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Push">
@@ -47,14 +47,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RCa-0U-HOe" secondAttribute="trailing" constant="139.5" id="0N5-hy-JZS"/>
-                            <constraint firstItem="RCa-0U-HOe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139.5" id="6gT-I0-kDh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qzq-IE-d1t" secondAttribute="bottom" constant="150" id="S0f-0d-u5U"/>
-                            <constraint firstItem="qzq-IE-d1t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="163" id="SyO-NJ-utI"/>
-                            <constraint firstItem="RCa-0U-HOe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a2D-2l-zwY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qzq-IE-d1t" secondAttribute="trailing" constant="162" id="c02-87-igA"/>
-                            <constraint firstItem="RCa-0U-HOe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="73" id="oAr-Ne-QuB"/>
-                            <constraint firstAttribute="width" secondItem="GR8-xS-kOc" secondAttribute="width" multiplier="3.06667" id="w6A-EK-usE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qzq-IE-d1t" secondAttribute="bottom" constant="150" id="877-E8-sjw"/>
+                            <constraint firstItem="RCa-0U-HOe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="73" id="CvL-Wd-ROM"/>
+                            <constraint firstItem="qzq-IE-d1t" firstAttribute="top" secondItem="GR8-xS-kOc" secondAttribute="bottom" constant="97" id="Ppg-wV-pAh"/>
+                            <constraint firstItem="RCa-0U-HOe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139.5" id="fyh-K9-ci2"/>
+                            <constraint firstItem="qzq-IE-d1t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kd8-uu-gUa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RCa-0U-HOe" secondAttribute="trailing" constant="139.5" id="sO0-tN-80Z"/>
                         </constraints>
                     </view>
                 </viewController>
