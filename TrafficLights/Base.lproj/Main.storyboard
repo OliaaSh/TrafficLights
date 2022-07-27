@@ -17,24 +17,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="RCa-0U-HOe">
-                                <rect key="frame" x="139.5" y="117" width="135" height="448"/>
+                                <rect key="frame" x="139.5" y="117" width="135" height="447"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w4V-5U-uj4">
-                                        <rect key="frame" x="0.0" y="0.0" width="135" height="135.5"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w4V-5U-uj4">
+                                        <rect key="frame" x="0.0" y="0.0" width="135" height="135"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="135" id="9B3-lL-Q6c"/>
+                                            <constraint firstAttribute="width" secondItem="w4V-5U-uj4" secondAttribute="height" multiplier="1:1" id="Wzh-8N-C1M"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rcv-as-pKt">
-                                        <rect key="frame" x="0.0" y="156.5" width="135" height="135"/>
+                                        <rect key="frame" x="0.0" y="156" width="135" height="135"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="135" id="WRm-Xe-Wee"/>
+                                            <constraint firstAttribute="width" secondItem="Rcv-as-pKt" secondAttribute="height" multiplier="1:1" id="shN-aA-R8u"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GR8-xS-kOc">
-                                        <rect key="frame" x="0.0" y="312.5" width="135" height="135.5"/>
+                                        <rect key="frame" x="0.0" y="312" width="135" height="135"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="135" id="YqU-bE-7X7"/>
+                                            <constraint firstAttribute="width" secondItem="GR8-xS-kOc" secondAttribute="height" multiplier="1:1" id="dCY-uT-Z0g"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzq-IE-d1t">
-                                <rect key="frame" x="162.5" y="662" width="89" height="50"/>
+                                <rect key="frame" x="162.5" y="661" width="89" height="51"/>
                                 <color key="backgroundColor" systemColor="systemBrownColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Push">
@@ -42,6 +54,9 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                     <color key="baseForegroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="pushButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="DBY-ri-Hxw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -55,6 +70,12 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RCa-0U-HOe" secondAttribute="trailing" constant="139.5" id="sO0-tN-80Z"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenLightView" destination="GR8-xS-kOc" id="u7K-z6-Hzb"/>
+                        <outlet property="pushButton" destination="qzq-IE-d1t" id="puh-zA-Svn"/>
+                        <outlet property="redLightView" destination="w4V-5U-uj4" id="xw8-NR-dqy"/>
+                        <outlet property="yellowLightView" destination="Rcv-as-pKt" id="0WN-WC-LuQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
