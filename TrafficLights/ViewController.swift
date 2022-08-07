@@ -31,14 +31,16 @@ class ViewController: UIViewController {
         greenLightView.alpha = lightIsOff
         
         pushButton.layer.cornerRadius = 10
-      //  pushButton.currentTitle = "Push"
       
+        print (redLightView.frame.height)
     }
     
     override func viewWillLayoutSubviews() {
         redLightView.layer.cornerRadius = redLightView.bounds.height/2
         yellowLightView.layer.cornerRadius = yellowLightView.bounds.height/2
         greenLightView.layer.cornerRadius = greenLightView.bounds.height/2
+        
+        print(redLightView.frame.height)
     }
     
     @IBAction func pushButtonPressed() {
