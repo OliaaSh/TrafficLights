@@ -7,61 +7,60 @@
 
 import UIKit
 
+enum Light {
+    case red, yellow, green
+}
+
 class ViewController: UIViewController {
 
-    
     @IBOutlet var redLightView: UIView!
     @IBOutlet var yellowLightView: UIView!
     @IBOutlet var greenLightView: UIView!
     
     @IBOutlet var pushButton: UIButton!
-    
-   var lights = ""
+   
+    private var currentLight = Light.red
+    private let lightIsOn: CGFloat = 1
+    private let lightIsOff: CGFloat = 0.3
     
     override func viewDidLoad() {
-        
-        lights = "All"
-        
-        redLightView.alpha = 1
-        yellowLightView.alpha = 1
-        greenLightView.alpha = 1
-        
         super.viewDidLoad()
      
-        redLightView.layer.cornerRadius = 20
-        yellowLightView.layer.cornerRadius = 20
-        greenLightView.layer.cornerRadius = 20
-        pushButton.layer.cornerRadius = 10
+        redLightView.alpha = lightIsOff
+        yellowLightView.alpha = lightIsOff
+        greenLightView.alpha = lightIsOff
         
+        pushButton.layer.cornerRadius = 10
+      
+    }
+    
+    override func viewWillLayoutSubviews() {
+        redLightView.layer.cornerRadius = redLightView.bounds.height/2
+        yellowLightView.layer.cornerRadius = yellowLightView.bounds.height/2
+        greenLightView.layer.cornerRadius = greenLightView.bounds.height/2
     }
     
     @IBAction func pushButtonPressed() {
-        if lights == "All" {
-            redLightView.alpha = 1
-            yellowLightView.alpha = 0.2
-            greenLightView.alpha = 0.2
-            
-            lights = "Red"
-            
-        } else  if lights == "Red" {
-            redLightView.alpha = 0.2
-            yellowLightView.alpha = 1
-            greenLightView.alpha = 0.2
-            
-            lights = "Yellow"
-            
-        } else if lights == "Yellow" {
-            redLightView.alpha = 0.2
-            yellowLightView.alpha = 0.2
-            greenLightView.alpha = 1
-            
-            lights = "All"
-        } 
+        if pushButton.currentTitle == "Push" {
+            pushButton.setTitle("Next", for: .normal)
+        }
+        
+        switch currentLight {
+        case .red:
+            greenLightView.alpha = lightIsOff
+            redLightView.alpha = lightIsOn
+            currentLight = .yellow
+        case .yellow:
+            redLightView.alpha = lightIsOff
+            yellowLightView.alpha = lightIsOn
+            currentLight = .green
+        case .green:
+            greenLightView.alpha = lightIsOn
+            yellowLightView.alpha = lightIsOff
+            currentLight = .red
+        }
+    }
 }
-}
-
-    
-   
     
     
     
