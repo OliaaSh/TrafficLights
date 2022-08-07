@@ -31,6 +31,7 @@ class ViewController: UIViewController {
         greenLightView.alpha = lightIsOff
         
         pushButton.layer.cornerRadius = 10
+      //  pushButton.currentTitle = "Push"
       
     }
     
@@ -43,7 +44,7 @@ class ViewController: UIViewController {
     @IBAction func pushButtonPressed() {
         if pushButton.currentTitle == "Push" {
             pushButton.setTitle("Next", for: .normal)
-        }
+       }
         
         switch currentLight {
         case .red:

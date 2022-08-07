@@ -16,19 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzq-IE-d1t">
-                                <rect key="frame" x="162.5" y="705" width="89" height="50"/>
-                                <color key="backgroundColor" systemColor="systemBrownColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Push">
-                                    <backgroundConfiguration key="background"/>
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
-                                    <color key="baseForegroundColor" systemColor="tertiarySystemBackgroundColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="pushButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="0C8-zZ-ipJ"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="NxW-c8-sIS">
                                 <rect key="frame" x="139.5" y="84" width="135" height="467"/>
                                 <subviews>
@@ -46,16 +33,29 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzq-IE-d1t">
+                                <rect key="frame" x="167" y="689" width="80" height="44"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Push" buttonSize="medium">
+                                    <backgroundConfiguration key="background"/>
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
+                                    <color key="baseForegroundColor" systemColor="tintColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="pushButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="0C8-zZ-ipJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
-                            <constraint firstItem="qzq-IE-d1t" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="E7u-OJ-cbU"/>
-                            <constraint firstItem="NxW-c8-sIS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="135:896" id="LqR-oJ-hp6"/>
-                            <constraint firstItem="NxW-c8-sIS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QNP-H2-lw0"/>
-                            <constraint firstItem="NxW-c8-sIS" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.521205" id="nB0-Y4-Rda"/>
-                            <constraint firstItem="NxW-c8-sIS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="weK-a7-0vi"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qzq-IE-d1t" secondAttribute="bottom" constant="107" id="xgZ-ZZ-8vt"/>
+                            <constraint firstItem="NxW-c8-sIS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9Kf-pp-0vQ"/>
+                            <constraint firstItem="NxW-c8-sIS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="135:896" id="Dqs-0e-1th"/>
+                            <constraint firstItem="NxW-c8-sIS" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.521205" id="OTT-pJ-JSd"/>
+                            <constraint firstItem="NxW-c8-sIS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="cWm-3f-WCM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qzq-IE-d1t" secondAttribute="bottom" constant="129" id="e2a-Ul-Wys"/>
+                            <constraint firstItem="qzq-IE-d1t" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uYV-CA-6fP"/>
                         </constraints>
                     </view>
                     <connections>
@@ -71,8 +71,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -86,8 +86,8 @@
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="tertiarySystemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
